@@ -1,0 +1,9 @@
+NAME="Favourix"
+PRETTY_NAME="Favourix"
+ID=fav
+BUILD_ID=rolling
+ANSI_COLOR="0;36"
+HOME_URL="https://www.favourix.com/"
+DOCUMENTATION_URL="https://favourix.com/wiki/"
+SUPPORT_URL="https://favourix.com/"
+BUG_REPORT_URL="https://www.favourix.com/search-issues/"
