@@ -105,15 +105,14 @@ gst-plugins-ugly
 ##################################
 ## desktop environment pakcages ##
 ##################################
-mate
-mate-extra
-brisk-menu
+cinnamon
 xdg-user-dirs
 
 ######################
 ## system installer ##
 ######################
 calamares
+calamares-favourix
 mkinitcpio-openswap
 
 
@@ -121,7 +120,6 @@ mkinitcpio-openswap
 ## package management ##
 ########################
 pamac
-#octopi
 
 ###############################
 ## artwork and font packages ##
@@ -234,7 +232,6 @@ gufw
 accountsservice
 #light-locker
 #menulibre
-orage
 #plank
 poppler-glib
 gnome-keyring

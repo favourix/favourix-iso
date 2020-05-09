@@ -14,6 +14,10 @@ hwclock --systohc
 #root config
 usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
+
+#fix permissions
+chown -R root:root /etc
+chown -R root:root /root
 chmod 700 /root
 
 # add liveuser
@@ -37,13 +41,11 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-#fix permissions
-chmod 750 /etc/sudoers.d
-chown -R root:root /etc/sudoers.d
-chown -R root:root /etc/polkit-1/rules.d
-chmod 750 /etc/polkit-1/rules.d
-chgrp polkitd /etc/polkit-1/rules.d
-chown liveuser:users /usr/bin/calamares_polkit
+
+
+#enable installer
+groupadd -r installer
+gpasswd -a liveuser installer
 
 #enable services
 systemctl enable pacman-init.service choose-mirror.service
